@@ -17,15 +17,17 @@ Some features may be disabled by configuration even if the underlying system sup
 At its core, the segment registry is a set of conditions used to filter instances of entities. At a given time or upon a specific signal, a segment defined by these conditions is materialized into a list of identifiers representing entries that satisfy the conditions. Other parts of the system can use this list to analyze data or trigger actions.
 
 Potential flags that enable or disable features based on constraints of the computation layer or user configuration:
-• Conditions on linked entities enabled (allow conditions not only on the main entity’s fields but also on fields of entities linked to the main one)
-• Composition of segments allowed
-• Composition of regular and materialized segments allowed
-• Conditions on arrays of linked entities allowed (support conditions on entities that can have multiple entries linked to one main entity)
+
+* Conditions on linked entities enabled (allow conditions not only on the main entity’s fields but also on fields of entities linked to the main one)
+* Composition of segments allowed
+* Composition of regular and materialized segments allowed
+* Conditions on arrays of linked entities allowed (support conditions on entities that can have multiple entries linked to one main entity)
 
 In a real-world implementation, one or more computation layers will be available alongside the segment registry. A user may select any supported computation layer or implement their own — for example, to use a database not yet supported or to add features the segment registry supports but that are not implemented for the desired database.
 
-Not covered topics:
-• Potential optimizations;
-• Tracking materialized segments and purging unused ones;
-• Metrics and logs: which key metrics should be provided?
+## Not covered topics
+
+* Potential optimizations;
+* Tracking materialized segments and purging unused ones;
+* Metrics and logs: which key metrics should be provided?
 
